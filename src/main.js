@@ -8,15 +8,15 @@ npm install react-redux-form --save
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import { createStore, applyMiddleware } from 'redux';
+import { createStore } from 'redux';
 import App from './components/app';
 import reducers from './reducers';
-const createStoreWithMiddleware = applyMiddleware()(createStore);
+//const createStoreWithMiddleware = applyMiddleware()(createStore);
 
 class Main extends React.Component {	
    render() {   
       return (
-      	 <Provider store={createStoreWithMiddleware(reducers)}>
+      	 <Provider store={createStore(reducers)}>
 		    <App />
 		  </Provider>
         
